@@ -1,18 +1,18 @@
-from selenium import webdriver
 from pageObjects.LoginPage import LoginPage
+from utilities.readProperties import ReadConfig
 
 
-class Test_001_Login:
-    baseURL = "https://admin-demo.nopcommerce.com/"
-    username = "admin@yourstore.com"
-    password = "admin"
+class Test001Login:
+    baseURL = ReadConfig.get_application_url()
+    username = ReadConfig.get_username()
+    password = ReadConfig.get_password()
 
-    def test_home_page_title(self):
-        self.driver = webdriver.Chrome()
+    def test_home_page_title(self, setup):
+        self.driver = setup
         self.driver.get(self.baseURL)
         self.driver.implicitly_wait(10)
         actual_title = self.driver.title
-        expected_title = "Your store. Logi"
+        expected_title = "Your store. Login"
 
         if actual_title == expected_title:
             self.driver.close()
@@ -22,8 +22,8 @@ class Test_001_Login:
             self.driver.close()
             assert False
 
-    def test_login(self):
-        self.driver = webdriver.Chrome()
+    def test_login(self, setup):
+        self.driver = setup
         self.driver.get(self.baseURL)
 
         self.lp = LoginPage(self.driver)
@@ -32,7 +32,7 @@ class Test_001_Login:
         self.lp.click_login()
 
         actual_title = self.driver.title
-        expected_title = "Dashboard / nopCommerce administratio"
+        expected_title = "Dashboard / nopCommerce administration"
 
         if actual_title == expected_title:
             self.driver.close()
