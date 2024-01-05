@@ -26,7 +26,9 @@ driver.get("https://opensource-demo.orangehrmlive.com/")
 
 driver.implicitly_wait(10)
 
+driver.find_element(By.NAME, "username").clear()
 driver.find_element(By.NAME, "username").send_keys("Admin")
+driver.find_element(By.NAME, "password").clear()
 driver.find_element(By.NAME, "password").send_keys("admin123")
 
 driver.implicitly_wait(10)
