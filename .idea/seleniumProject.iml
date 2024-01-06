@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.pytest_cache/v" />
       <excludeFolder url="file://$MODULE_DIR$/Logs" />
+      <excludeFolder url="file://$MODULE_DIR$/Reports" />
       <excludeFolder url="file://$MODULE_DIR$/Screenshots" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
