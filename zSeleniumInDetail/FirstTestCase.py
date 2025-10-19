@@ -17,7 +17,7 @@ from selenium.webdriver.chrome.service import Service
 # serv_obj = Service('C:\\Users\\Administrator\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe')
 # driver = webdriver.Chrome(service=serv_obj)
 
-# If we put the chrome driver at "C:\Users\Administrator\AppData\Local\Programs\Python\Python38\Scripts"
+# If we put the chrome driver at "C:\Users\Administrator\AppData\Local\Programs\Python\Python38\Scripts" or "C:\Users\aruns\AppData\Local\Programs\Python\Python313\Scripts"
 # then no need to pass the driver path in constructor. Hence above lines can be written as
 
 driver = webdriver.Chrome()
